@@ -12,7 +12,7 @@ class Api::DeliveriesController < ApplicationController
       # Trigger to send mail
       respond_with(status: :created, location: nil)
     else
-      respond_with(status: :unprocessable_entity, location: nil)
+      respond_with(@delivery.errors , status: :unprocessable_entity, location: nil)
     end
   end
 end
