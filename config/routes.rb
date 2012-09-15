@@ -1,4 +1,6 @@
 DeliveryBoy::Application.routes.draw do
+  post "api/deliveries/create"
+
   # get "delivery_people/new"
 
   # get "delivery_people/create"
