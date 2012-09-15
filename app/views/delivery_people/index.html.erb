@@ -1,0 +1,16 @@
+<h1>All Delivery people</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>no of deliveries</th>
+    <th>actions</th>
+  </thead>
+  <% @delivery_people.each do |dp| %>
+    <tbody>
+      <td><%= dp.name %></td>
+      <td><%= dp.deliveries.size %></td>
+      <td><%= link_to 'add delivery', new_seller_courier_company_delivery_person_delivery_path(@seller, @cc, dp), class: 'btn btn-mini btn-info' %></td>
+    </tbody>
+  <% end %>
+</table>

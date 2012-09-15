@@ -1,0 +1,16 @@
+<h1>All Delivery people</h1>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>address</th>
+    <th>description</th>
+  </thead>
+  <% @deliveries.each do |dp| %>
+    <tbody>
+      <td><%= dp.item_name %></td>
+      <td><%= dp.address %></td>
+      <td><%= dp.desc %></td>
+    </tbody>
+  <% end %>
+</table>

@@ -1,0 +1,36 @@
+<div class="span11">
+  <div class="heading">
+    Add new task
+  </div>
+  
+  <%= form_for @delivery, url: seller_courier_company_delivery_person_deliveries_path, action: :post do |f|%>
+    <div class="field-box">
+      <div class = "control-group">
+        <%= f.label :name , :class => 'control-label'%>
+        <div class = "controls">
+          <%= f.text_field :item_name, :class => 'text_field'%>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-box">
+      <div class = "control-group">
+        <%= f.label :address , :class => 'control-label'%>
+        <div class = "controls">
+          <%= f.text_area :address, rows: 5 ,:class => 'text_field'%>
+        </div>
+      </div>
+    </div>
+
+    <div class="field-box">
+      <div class = "control-group">
+        <%= f.label :description , :class => 'control-label'%>
+        <div class = "controls">
+          <%= f.text_area :desc, rows: 5, :class => 'text_field'%>
+        </div>
+      </div>
+    </div>
+
+    <%= f.submit %>
+  <% end %>
+</div>

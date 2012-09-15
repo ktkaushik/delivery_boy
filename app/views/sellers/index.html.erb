@@ -1,0 +1,18 @@
+<h1>All Sellers</h1>
+
+<div class="add-seller">
+  <%= link_to 'Add New seller', new_seller_path, class: 'btn btn-primary' %>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>no of deliveries</th>
+  </thead>
+  <% @sellers.each do |seller| %>
+    <tbody>
+      <td><%= seller.name %></td>
+      <td><%= seller.deliveries.size %></td>
+    </tbody>
+  <% end %>
+</table>

@@ -1,0 +1,22 @@
+<h1>All Courier Companies</h1>
+
+<div class="add-seller">
+  <%= link_to 'Add New Courier Company', new_seller_courier_company_path , class: 'btn btn-primary' %>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <th>Name</th>
+    <th>delivery people</th>
+    <th>no of deliveries</th>
+    <th>actions</th>
+  </thead>
+  <% @courier_companies.each do |cc| %>
+    <tbody>
+      <td><%= cc.name %></td>
+      <td><%= cc.delivery_people.size %></td>
+      <td><%= cc.deliveries.size %></td>
+      <td><%= link_to 'add delivery person', new_seller_courier_company_delivery_person_path(@seller,cc), class: 'btn btn-mini btn-warning' %></td>
+    </tbody>
+  <% end %>
+</table>

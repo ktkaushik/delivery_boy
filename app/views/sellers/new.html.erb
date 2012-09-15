@@ -1,0 +1,16 @@
+<div class="span11">
+  <div class="heading">
+    Add new seller
+  </div>
+  <%= form_for @seller, url: sellers_path, action: :post do |f|%>
+    <div class="field-box">
+      <div class = "control-group">
+        <%= f.label :name , :class => 'control-label'%>
+        <div class = "controls">
+          <%= f.text_field :name, :class => 'text_field'%>
+        </div>
+      </div>
+    </div>
+    <%= f.submit %>
+  <% end %>
+</div>
