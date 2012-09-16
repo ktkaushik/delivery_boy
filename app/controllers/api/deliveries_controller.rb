@@ -1,5 +1,6 @@
 class Api::DeliveriesController < ApplicationController
   protect_from_forgery :except => [:create]
+
   respond_to :json
 
   def create
@@ -11,11 +12,11 @@ class Api::DeliveriesController < ApplicationController
     # Updating attributes to mark it delivered !
     if @delivery.update_attributes( delivered: true )
       # Trigger to send mail
-      NotifierMailer.delay.notify_seller( @seller, @courier_company, @delivery_person, @delivery)
-      NotifierMailer.delay.notify_courier_company( @seller, @courier_company, @delivery_person, @delivery)
-      respond_with(status: :created, location: nil)
+      NotificationMailer.delay.notify_seller( @seller, @courier_company, @delivery_person, @delivery)
+      NotificationMailer.delay.notify_courier_company( @seller, @courier_company, @delivery_person, @delivery)
+      respond_with( @delivery, :status => :created , :location => nil)
     else
-      respond_with(@delivery.errors , status: :unprocessable_entity, location: nil)
+      respond_with( @delivery.errors, :status => :unprocessable_entity , :location => nil)
     end
   end
 end
