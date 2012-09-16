@@ -8,11 +8,13 @@
   <thead>
     <th>Name</th>
     <th>no of deliveries</th>
+    <th>actions</th>
   </thead>
   <% @sellers.each do |seller| %>
     <tbody>
       <td><%= seller.name %></td>
       <td><%= seller.deliveries.size %></td>
+      <td><%= link_to 'courier_companies', seller_courier_companies_path(seller), class: 'btn btn-mini btn-info' %></td>
     </tbody>
   <% end %>
 </table>

@@ -17,6 +17,7 @@
       <td><%= cc.delivery_people.size %></td>
       <td><%= cc.deliveries.size %></td>
       <td><%= link_to 'add delivery person', new_seller_courier_company_delivery_person_path(@seller,cc), class: 'btn btn-mini btn-warning' %></td>
+      <td><%= link_to 'view delivery people', seller_courier_company_delivery_people_path(@seller,cc), class: 'btn btn-mini btn-warning' %></td>
     </tbody>
   <% end %>
 </table>

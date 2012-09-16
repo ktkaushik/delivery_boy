@@ -10,7 +10,8 @@
     <tbody>
       <td><%= dp.name %></td>
       <td><%= dp.deliveries.size %></td>
-      <td><%= link_to 'add delivery', new_seller_courier_company_delivery_person_delivery_path(@seller, @cc, dp), class: 'btn btn-mini btn-info' %></td>
+      <td><%= link_to 'add delivery', new_seller_courier_company_delivery_person_delivery_path(@seller, @cc, dp), class: 'btn btn-mini btn-info' %> </td>
+      <td><%= link_to 'view deliveries', seller_courier_company_delivery_person_deliveries_path(@seller, @cc, dp), class: 'btn btn-mini btn-info' %> </td>
     </tbody>
   <% end %>
 </table>
