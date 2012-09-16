@@ -74,7 +74,7 @@ DeliveryBoy::Application.configure do
     :port                 => 587,
     :domain               => 'gmail.com',
     :user_name            => 'notifierdeliveryboy@gmail.com',
-    :password             => 'NotifierDeliveryBoy',
+    :password             => 'password_here',
     :authentication       => 'plain',
     :enable_starttls_auto => true
   }
@@ -82,5 +82,4 @@ DeliveryBoy::Application.configure do
   config.emails = {
     :from_email =>  "notifierdeliveryboy@gmail.com",
   }
-
 end
