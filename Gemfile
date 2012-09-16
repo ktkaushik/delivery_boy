@@ -22,6 +22,7 @@ end
 group :development do
   gem 'hirb'
   gem 'wirb'
+  gem 'sextant'
   gem 'awesome_print'
 end
 
