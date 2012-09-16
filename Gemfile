@@ -28,7 +28,7 @@ end
 
 gem 'jquery-rails'
 gem 'delayed_job_active_record'
-gem "activerecord-postgresql-adapter"
+# gem "activerecord-postgresql-adapter"
 gem 'pg'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
