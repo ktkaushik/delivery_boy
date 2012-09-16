@@ -1,40 +1,6 @@
 DeliveryBoy::Application.routes.draw do
   post "api/deliveries/create"
 
-  # get "delivery_people/new"
-
-  # get "delivery_people/create"
-
-  # get "delivery_people/edit"
-
-  # get "delivery_people/update"
-
-  # get "courier_companies/new"
-
-  # get "courier_companies/create"
-
-  # get "courier_companies/edit"
-
-  # get "courier_companies/update"
-
-  # get "sellers/new"
-
-  # get "sellers/create"
-
-  # get "sellers/edit"
-
-  # get "sellers/update"
-
-  # get "deliveries/new", as: "new_delivery"
-
-  # post "deliveries/create", as: "create_deliveries"
-
-  # get "deliveries/index", as: "deliveries"
-
-  # get "deliveries/edit", as: "edit_delivery"
-
-  # put "deliveries/update", as: "update_delivery"
-
   resources :sellers do 
     resources :courier_companies do 
       resources :delivery_people do 
